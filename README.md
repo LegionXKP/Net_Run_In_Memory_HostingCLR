@@ -12,11 +12,11 @@
 **Как работать?**\
 Для начала создаём приложение в C#(Csharp), компилируем его обязательно в **Release**, проверяем что приложение работает.
 
-Затем запускаем редактор HxD, перемещаем туда наш скомпилированный файл, выделяем весь байтовый код (ctrl + a)<br> жмём по кнопочке "**Правка**" -> "**Копировать как**" -> Выбераем язык "**С**"
+Затем запускаем редактор [hxd hex editor](https://www.google.com/search?client=opera&sxsrf=ALeKk01P5dnodU113j_3xhu2hCuLN_k37A%3A1601215381022&ei=lZtwX85jrequBJeVhegJ&q=hxd+hex+editor&oq=HxD&gs_lcp=CgZwc3ktYWIQARgBMgcIABCxAxBDMgIIADICCAAyAggAMgIIADICCAAyAggAMgIIADICCAAyAggAUN7kdFje5HRg0fB0aABwAXgAgAGJAogBiQKSAQMyLTGYAQCgAQKgAQGqAQdnd3Mtd2l6wAEB&sclient=psy-ab), перемещаем туда наш скомпилированный файл, выделяем весь байтовый код (*ctrl + a*)<br> жмём по кнопочке "**Правка**" -> "**Копировать как**" -> Выбераем язык "**С**"
 
 После этого у нас в буфер обмена скопируется весь наш байтовый код приложения.
 
-Следующим этапом запускаем в студии наш проект HostingCLR, переходим в класс **HostingCLR.cpp** тут нам нужно вставить наши байты за место этого кода:
+Следующим этапом запускаем в студии наш проект HostingCLR, переходим в класс **HostingCLR.cpp**<br> тут нам нужно вставить наши байты за место этого кода:
 
 ````cpp
 unsigned char rawData[8192] = {
